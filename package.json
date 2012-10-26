@@ -1,0 +1,22 @@
+{
+  "name": "jsonselect",
+  "version": "0.0.1",
+  "description": "Filter out JSON field using Mongoose's select syntax.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "mongoose",
+    "json",
+    "filter",
+    "utility"
+  ],
+  "author": "Olivier Lalonde <olalonde@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "JSONPath": "",
+    "underscore": ""
+  }
+}
