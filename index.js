@@ -104,10 +104,6 @@ function modifyPath(type, obj, path, value) {
     root = root[property];
   }
   return obj;
-  console.log('done');
-  //eval('property = oldObj' + path);
-  
-  
 }
 
 // Recursive
@@ -128,18 +124,15 @@ function traverse (obj, cb, parent, key) {
 
 function parseOptions (str) {
   var only = [], except = [];
-
   var regex = {
-    only: /\+[^ ]+/g
+    only: /[^- ][^ ]*/g
     , except: /\-[^ ]+/g
   }
-
   str.replace(regex.only, function(path) {
-    only.push(path.substr(1)); // strip + or -
+    only.push(path); // strip + or -
   });
   str.replace(regex.except, function(path) {
-    except.push(path.substr(1)); // strip + or -
+    except.push(path.substr(1)); // strip -
   });
-
   return {only: only, except: except};
 }
