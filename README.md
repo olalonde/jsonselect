@@ -26,7 +26,7 @@ var a2 = select(obj, { only: 'username email name.first friends', except: 'frien
 
 var b = select(obj, '-password'); // everything except password
 // equivalent to
-var b2 = select(obj, { except: '-password' });
+var b2 = select(obj, { except: 'password' });
 ```
 
 # Using with Mongoose
